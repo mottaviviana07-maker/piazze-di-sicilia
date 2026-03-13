@@ -75,36 +75,75 @@ nav a:hover { color: #656565; }
     color: #333;
 }
 
-/* REGOLE PER IL TELEFONO */
+
+/* --- CODICE DEFINITIVO RESPONSIVE (EFFETTO PC) --- */
 @media screen and (max-width: 600px) {
     
-    /* Rimpicciolire il titolo dell'header */
-    header h1 {
-        font-size: 20px;
-        margin-bottom: 10px;
+    /* 1. HEADER */
+    header {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 15px !important;
     }
 
-    /* Sistemiamo i link del menu */
+    header h1 {
+        font-size: 15px !important;
+        margin: 0 !important;
+    }
+
     nav ul {
-        display: flex;
-        gap: 10px;
-        padding: 0;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     nav a {
-        font-size: 14px;
+        font-size: 12px !important;
     }
 
-    /* Rimpicciolire domandone centrale giallo */
-    main h1 {
-        font-size: 28px !important;
-        line-height: 1.2;
+    /* 2. GRIGLIA IMMAGINI */
+    main, .container, .grid-piazze { 
+        display: flex !important;
+        flex-direction: row !important; 
+        flex-wrap: wrap !important;     
+        justify-content: center !important;
+        gap: 10px !important;           
+        padding: 10px !important;
     }
 
-    /* foto e spazio */
+    /* 3. LE BOX (LE CARD) */
+    .box-contenitore, .piazza-card, .card {
+        width: 45% !important; 
+        margin: 0 !important;
+        border-radius: 10px !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        background-color: #e0f7fa; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Immagini dentro le box */
     img {
-        max-width: 100%;
-        height: auto;
+        width: 100% !important;
+        height: 120px !important; 
+        object-fit: cover !important; 
+    }
+
+    /* Testi sotto le foto nelle box */
+    .box-contenitore h3, .piazza-card h3 {
+        font-size: 14px !important;
+        margin: 5px 0 !important;
+        text-align: center;
+    }
+
+    .box-contenitore p, .piazza-card p {
+        font-size: 11px !important;
+        text-align: center;
+        padding: 0 5px 5px 5px !important;
     }
 }
 
