@@ -75,5 +75,38 @@ nav a:hover { color: #656565; }
     color: #333;
 }
 
+/* REGOLE PER IL TELEFONO */
+@media screen and (max-width: 600px) {
+    
+    /* Rimpicciolire il titolo dell'header */
+    header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Sistemiamo i link del menu */
+    nav ul {
+        display: flex;
+        gap: 10px;
+        padding: 0;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    /* Rimpicciolire domandone centrale giallo */
+    main h1 {
+        font-size: 28px !important;
+        line-height: 1.2;
+    }
+
+    /* foto e spazio */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 /* --- FOOTER --- */
 footer { background: #222; color: #fff; text-align: center; padding: 30px; margin-top:300px; }
