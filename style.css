@@ -79,72 +79,74 @@ nav a:hover { color: #656565; }
 /* --- CODICE DEFINITIVO RESPONSIVE (EFFETTO PC) --- */
 @media screen and (max-width: 600px) {
 
- /* 1. HEADER */
+ /* 1. HEADER: Lo riportiamo orizzontale come su PC */
     header {
         display: flex !important;
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
-        padding: 5px 10px !important;
-        height: 60px !important; 
+        padding: 10px 15px !important;
     }
 
     header h1 {
-        font-size: 14px !important; 
-        width: auto !important;
+        font-size: 16px !important; /* Più piccolo per stare a sinistra */
         margin: 0 !important;
-        white-space: nowrap !important; 
-    }
-
-    nav {
-        display: block !important;
-        width: auto !important;
+        text-align: left !important;
     }
 
     nav ul {
         display: flex !important;
         flex-direction: row !important;
-        gap: 5px !important;
+        gap: 10px !important; /* Distanza tra Home, Archivio, Info */
         margin: 0 !important;
         padding: 0 !important;
+        list-style: none !important;
     }
 
     nav a {
-        font-size: 10px !important; 
+        font-size: 13px !important; /* Leggibile ma compatto */
     }
 
-    /* 2. GRIGLIA */
+    /* 2. CORPO DELLA PAGINA: Margini laterali (Effetto PC) */
     main {
-        padding: 10px !important;
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important; 
-        justify-content: space-between !important;
+        padding: 0 20px !important; /* Questo stacca i box dai bordi del vetro */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Regola per le card delle piazze e i box info */
-    .piazza-card, .box-contenitore, section {
-        width: 48% !important; 
-        margin: 1% !important;
-        display: inline-block !important;
-        vertical-align: top;
+    /* Titolo giallo centrale rimpicciolito */
+    main h1 {
+        font-size: 26px !important;
+        text-align: center;
+        margin: 20px 0 !important;
     }
 
-    /* 3. IMMAGINI E TESTI */
+    /* 3. BOX E IMMAGINI: Per farli sembrare schede */
+    .box-contenitore, .piazza-card, section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 25px !important;
+        border-radius: 12px !important; /* Arrotonda gli angoli come su Figma */
+        overflow: hidden;
+    }
+
     img {
         width: 100% !important;
-        height: 100px !important; 
-        object-fit: cover !important;
+        height: auto !important;
+        display: block;
     }
 
-    h2, h3 {
-        font-size: 12px !important;
-        text-align: center !important;
-    }
-
+    /* 4. TESTI DESCRITTIVI */
     p {
-        font-size: 10px !important;
-        line-height: 1.2 !important;
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        padding: 0 5px !important; /* Un po' di respiro dentro i box */
+    }
+
+    h2 {
+        font-size: 20px !important;
+        margin-top: 15px !important;
     }
    
 }
