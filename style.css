@@ -78,73 +78,25 @@ nav a:hover { color: #656565; }
 
 /* --- CODICE DEFINITIVO RESPONSIVE (EFFETTO PC) --- */
 @media screen and (max-width: 600px) {
-    
-    /* 1. HEADER */
-    header {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 10px 15px !important;
-    }
 
-    header h1 {
-        font-size: 15px !important;
-        margin: 0 !important;
-    }
+    /* Forzare il layout a rimanere largo come su PC */
+body {
+    min-width: 1200px;
+    margin: 0 auto;
+}
 
-    nav ul {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 8px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
+header, main, footer {
+    width: 100%;
+}
 
-    nav a {
-        font-size: 12px !important;
-    }
-
-    /* 2. GRIGLIA IMMAGINI */
-    main, .container, .grid-piazze { 
-        display: flex !important;
-        flex-direction: row !important; 
-        flex-wrap: wrap !important;     
-        justify-content: center !important;
-        gap: 10px !important;           
-        padding: 10px !important;
-    }
-
-    /* 3. LE BOX (LE CARD) */
-    .box-contenitore, .piazza-card, .card {
-        width: 45% !important; 
-        margin: 0 !important;
-        border-radius: 10px !important;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        background-color: #e0f7fa; 
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Immagini dentro le box */
-    img {
-        width: 100% !important;
-        height: 120px !important; 
-        object-fit: cover !important; 
-    }
-
-    /* Testi sotto le foto nelle box */
-    .box-contenitore h3, .piazza-card h3 {
-        font-size: 14px !important;
-        margin: 5px 0 !important;
-        text-align: center;
-    }
-
-    .box-contenitore p, .piazza-card p {
-        font-size: 11px !important;
-        text-align: center;
-        padding: 0 5px 5px 5px !important;
-    }
+/* Assicurare che la griglia delle piazze usa Flexbox per stare affiancata */
+.container, .grid-piazze {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+}
+   
 }
 
 /* --- FOOTER --- */
